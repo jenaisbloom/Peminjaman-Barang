@@ -265,11 +265,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnReset = document.getElementById("btnReset");
     if (btnReset) btnReset.addEventListener("click", resetData);
   }
-   function togglePassword() {
-    const password = document.getElementById("password");
-    const eyeOpen = document.getElementById("eyeOpen");
-    const eyeClosed = document.getElementById("eyeClosed");
+   document.addEventListener("DOMContentLoaded", function () {
+  const password = document.getElementById("password");
+  const toggleEye = document.getElementById("toggleEye");
+  const eyeOpen = document.getElementById("eyeOpen");
+  const eyeClosed = document.getElementById("eyeClosed");
 
+  toggleEye.addEventListener("click", function () {
     if (password.type === "password") {
       password.type = "text";
       eyeOpen.style.display = "none";
@@ -279,7 +281,10 @@ document.addEventListener("DOMContentLoaded", () => {
       eyeOpen.style.display = "block";
       eyeClosed.style.display = "none";
     }
-  }
+  });
 });
+
+});
+
 
 
