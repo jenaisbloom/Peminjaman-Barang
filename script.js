@@ -266,16 +266,20 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnReset) btnReset.addEventListener("click", resetData);
   }
    function togglePassword() {
-  const password = document.getElementById("password");
-  const eye = document.querySelector(".eye");
+    const password = document.getElementById("password");
+    const eyeOpen = document.getElementById("eyeOpen");
+    const eyeClosed = document.getElementById("eyeClosed");
 
-  if (password.type === "password") {
-    password.type = "text";
-    eye.classList.add("closed");
-  } else {
-    password.type = "password";
-    eye.classList.remove("closed");
+    if (password.type === "password") {
+      password.type = "text";
+      eyeOpen.style.display = "none";
+      eyeClosed.style.display = "block";
+    } else {
+      password.type = "password";
+      eyeOpen.style.display = "block";
+      eyeClosed.style.display = "none";
+    }
   }
-}
 });
+
 
