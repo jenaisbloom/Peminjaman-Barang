@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Petugas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="cekRole('petugas')">
+
+<header>
+  <h3>Halaman Petugas</h3>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<div class="container">
+  <h4>Input Peminjaman Barang</h4>
+
+  <input id="peminjam" placeholder="Nama Peminjam">
+    <input type="number" id="telepon" placeholder="Nomor Telepon">
+    <input id="alamat" placeholder="Alamat">
+  <input id="barang" placeholder="Nama Barang">
+  <input type="number" id="jumlah" placeholder="Jumlah Barang">
+  <input type="date" id="tglPinjam">
+  <input type="date" id="tglKembali">
+
+  <button onclick="tambahData()">Simpan</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

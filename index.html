@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Login Sistem Peminjaman</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="login-box">
+  <h2>Login Sistem</h2>
+
+  <select id="role">
+    <option value="">Pilih Role</option>
+    <option value="peminjam">Peminjam</option>
+    <option value="admin">Admin</option>
+  </select>
+
+  <input type="text" id="username" placeholder="Username" />
+  <input type="password" id="password" placeholder="Password" min="8" />
+
+ <span 
+    onclick="togglePassword()" 
+    style="
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    "
+  >
+   
+  </span>
+
+  <button id="btnLogin">Masuk</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

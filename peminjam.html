@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Halaman Peminjam</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="peminjam">
+
+<header>
+  <h3>Halaman Peminjam</h3>
+  <a href="index.html">
+  <button id="btnLogout">Logout</button>
+</a>
+
+</header>
+
+<div class="container">
+  <h4>Form Peminjaman Barang</h4>
+
+  <input id="namaPeminjam" placeholder="Nama Peminjam" />
+  <input id="telpPeminjam" placeholder="No. Telepon Peminjam (contoh: 08xxxx)" min="12" />
+  <textarea id="alamatPeminjam" placeholder="Alamat Peminjam"></textarea>
+
+  <select id="barang">
+    <option value="">Pilih Barang</option>
+    <option value="Tripod">Tripod</option>
+    <option value="iP 17 Pro">iP 17 Pro</option>
+    <option value="Pajero">Pajero</option>
+  </select>
+
+  <input type="number" id="jumlah" placeholder="Jumlah Barang" min="1" />
+
+  <label>Tanggal Pinjam</label>
+  <input type="date" id="tglPinjam" />
+
+  <label>Tanggal Kembali</label>
+  <input type="date" id="tglKembali" />
+
+  <small>* Maksimal peminjaman 3 hari</small>
+
+  <button id="btnAjukan">Ajukan Peminjaman</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

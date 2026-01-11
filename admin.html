@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Dashboard Admin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="admin">
+
+<header>
+  <h3>Dashboard Admin</h3>
+ <a href="index.html">
+  <button id="btnLogout">Logout</button>
+</a>
+
+</header>
+
+<div class="container">
+  <h4>Contact Person Admin</h4>
+  <p><b>No. Telp:</b> 0812-3456-7890</p>
+  <p><b>Email:</b> admin@sistempeminjaman.com</p>
+
+  <h4>Stok Barang</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Nama Barang</th>
+        <th>Stok</th>
+      </tr>
+    </thead>
+    <tbody id="tabelBarang"></tbody>
+  </table>
+
+  <h4>Data Peminjaman</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Peminjam</th>
+        <th>No Telp</th>
+        <th>Alamat</th>
+        <th>Barang</th>
+        <th>Jumlah</th>
+        <th>Tgl Pinjam</th>
+        <th>Tgl Kembali</th>
+        <th>Status</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody id="tabelAdmin"></tbody>
+  </table>
+
+  <button id="btnReset" class="danger">Reset Data (Opsional)</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

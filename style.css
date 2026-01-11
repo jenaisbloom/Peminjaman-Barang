@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+}
+
+.login-box {
+  width: 360px;
+  max-width: 92vw;
+  margin: 110px auto;
+  background: #fff;
+  padding: 22px;
+  border-radius: 10px;
+}
+
+input, select, textarea, button, label {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input, select, textarea {
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+}
+
+textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+button {
+  background: green;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+button:hover { opacity: 0.95; }
+
+header {
+  background: green;
+  color: white;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h3 { margin: 0; }
+
+.container { padding: 20px; }
+
+table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+th, td {
+  border: 1px solid #d9d9d9;
+  padding: 8px;
+  text-align: center;
+}
+
+.status-dipinjam { color: red; font-weight: bold; }
+.status-kembali { color: green; font-weight: bold; }
+
+small { display: block; margin-top: 4px; color: #333; }
+
+.danger {
+  background: #b00020;
+}
