@@ -1,6 +1,4 @@
-/* =========================
-   UTIL
-========================= */
+
 function getLS(key, fallback) {
   const raw = localStorage.getItem(key);
   if (!raw) return fallback;
@@ -17,9 +15,6 @@ function daysBetween(dateStartStr, dateEndStr) {
   return (end - start) / (1000 * 60 * 60 * 24);
 }
 
-/* =========================
-   INIT DATA (BARANG)
-========================= */
 function initBarang() {
   if (!localStorage.getItem("barang")) {
     setLS("barang", [
@@ -30,9 +25,6 @@ function initBarang() {
   }
 }
 
-/* =========================
-   AUTH / ROLE
-========================= */
 function requireRole(roleNeeded) {
   const role = localStorage.getItem("role");
   if (role !== roleNeeded) {
@@ -45,9 +37,6 @@ function logout() {
   window.location.href = "index.html";
 }
 
-/* =========================
-   LOGIN
-========================= */
 function handleLogin() {
   const role = document.getElementById("role").value.trim();
   const user = document.getElementById("username").value.trim();
@@ -73,9 +62,7 @@ function handleLogin() {
   alert("Login gagal. Cek role / username / password.");
 }
 
-/* =========================
-   PEMINJAM
-========================= */
+
 function tambahPeminjaman() {
   const nama = document.getElementById("namaPeminjam").value.trim();
   const telp = document.getElementById("telpPeminjam").value.trim();
@@ -126,9 +113,6 @@ function tambahPeminjaman() {
   document.querySelectorAll("input").forEach(i => i.value = "");
 }
 
-/* =========================
-   ADMIN
-========================= */
 function renderStok() {
   const tbody = document.getElementById("tabelBarang");
   if (!tbody) return;
@@ -198,9 +182,6 @@ function resetData() {
   renderAdmin();
 }
 
-/* =========================
-   PAGE INIT + EYE PASSWORD
-========================= */
 document.addEventListener("DOMContentLoaded", () => {
   initBarang();
 
@@ -224,7 +205,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnReset) btnReset.addEventListener("click", resetData);
   }
 
-  // ===== TOGGLE PASSWORD (SVG EYE) =====
   const password = document.getElementById("password");
   const toggleEye = document.getElementById("toggleEye");
   const eyeOpen = document.getElementById("eyeOpen");
@@ -239,3 +219,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
