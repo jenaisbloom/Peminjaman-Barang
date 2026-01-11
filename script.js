@@ -265,4 +265,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnReset = document.getElementById("btnReset");
     if (btnReset) btnReset.addEventListener("click", resetData);
   }
+   function togglePassword() {
+  const password = document.getElementById("password");
+  const eye = document.querySelector(".eye");
+
+  if (password.type === "password") {
+    password.type = "text";
+    eye.classList.add("closed");
+  } else {
+    password.type = "password";
+    eye.classList.remove("closed");
+  }
+}
 });
+
